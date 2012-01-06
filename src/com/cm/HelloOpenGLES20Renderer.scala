@@ -70,16 +70,10 @@ class HelloOpenGLES20Renderer extends GLSurfaceView.Renderer {
     }
 	
 	private def initShapes() {
-        val triangleCoords = new Array[Float](9)
-        triangleCoords(0) = -0.5f
-        triangleCoords(1) = -0.25f
-        triangleCoords(2) = 0
-        triangleCoords(3) = 0.5f
-        triangleCoords(4) = -0.25f
-        triangleCoords(5) = 0
-        triangleCoords(6) = 0
-        triangleCoords(7) = 0.559016994f
-        triangleCoords(8) = 0
+        val triangleCoords = Array(
+            -0.5f,-0.25f,0f,
+             0.5f,-0.25f,0f,
+             0f, 0.559016994f,  0)
           
         // initialize vertex Buffer for triangle  
         val vbb = ByteBuffer.allocateDirect(
